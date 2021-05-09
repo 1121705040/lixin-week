@@ -36,7 +36,7 @@ public class HelloClassLoader extends ClassLoader{
     }
 
     private static byte[] getBytes() throws IOException {
-        FileInputStream in = new FileInputStream("/Users/lixin/Downloads/作业相关/Hello/Hello.xlass");
+        FileInputStream in = new FileInputStream(HelloClassLoader.class.getResource("Hello.xlass").getPath());
         byte[] bytesTmp = new byte[1024*4];
         int length = in.read(bytesTmp);
         return Arrays.copyOf(bytesTmp,length);
