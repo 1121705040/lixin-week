@@ -1,9 +1,9 @@
-package week3.第一题;
+package week3.第一题必做;
 
-import week3.第一题.server.NettyHttpServer;
-import week3.第一题.server.servers.HttpServiceTest;
-import week3.第一题.server.servers.HttpServiceTest2;
-import week3.第一题.server.servers.HttpServiceTest3;
+import week3.第一题必做.server.NettyHttpServer;
+import week3.第一题必做.server.servers.HttpServiceTest;
+import week3.第一题必做.server.servers.HttpServiceTest2;
+import week3.第一题必做.server.servers.HttpServiceTest3;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
