@@ -25,7 +25,7 @@ public class HttpServiceTest2 {
             PrintWriter printWriter = new PrintWriter(accept.getOutputStream(), true);
             printWriter.println("HTTP/1.1 200 OK");
             printWriter.println("Content-Type:text/html;charset=utf-8");
-            String body = "hello NIO-2";
+            String body = "Netty 2";
             printWriter.println("Content-Length:"+body.getBytes().length);
             printWriter.println();
             printWriter.write(body);

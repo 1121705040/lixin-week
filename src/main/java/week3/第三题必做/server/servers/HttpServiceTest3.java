@@ -1,4 +1,4 @@
-package week3.第一题必做.server.servers;
+package week3.第三题必做.server.servers;
 
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -25,7 +25,7 @@ public class HttpServiceTest3 {
             PrintWriter printWriter = new PrintWriter(accept.getOutputStream(), true);
             printWriter.println("HTTP/1.1 200 OK");
             printWriter.println("Content-Type:text/html;charset=utf-8");
-            String body = "hello NIO-3";
+            String body = "Netty 3";
             printWriter.println("Content-Length:"+body.getBytes().length);
             printWriter.println();
             printWriter.write(body);
