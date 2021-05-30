@@ -1,6 +1,4 @@
-package week4.mustdo1;
-
-import lombok.SneakyThrows;
+package week4.must1;
 
 
 /**

@@ -1,9 +1,5 @@
-package week4.mustdo1;
-import java.util.concurrent.*;
-import java.util.concurrent.locks.Lock;
+package week4.must1;
 import java.util.concurrent.locks.LockSupport;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 
 /**
