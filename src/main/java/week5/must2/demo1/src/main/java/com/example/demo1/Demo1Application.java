@@ -1,4 +1,4 @@
-package com.example.demo1;
+package week5.must2.demo1.src.main.java.com.example.demo1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
