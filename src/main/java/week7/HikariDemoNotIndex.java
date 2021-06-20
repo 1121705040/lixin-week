@@ -15,7 +15,9 @@ import java.util.List;
  */
 public class HikariDemoNotIndex {
     public static void main(String[] args) throws ClassNotFoundException, SQLException  {
-        String URL="jdbc:mysql://127.0.0.1:3306/java?useUnicode=true&characterEncoding=utf-8";
+        //这次加了批处理参数rewriteBatchedStatements=true 用时81152毫秒
+        //删除除主键外的索引用时60978毫秒
+        String URL="jdbc:mysql://127.0.0.1:3306/java?useUnicode=true&characterEncoding=utf-8&rewriteBatchedStatements=true";
         String USER="root";
         String PASSWORD="lixin";
         HikariDataSource hikariDataSource = new HikariDataSource();
@@ -32,6 +34,7 @@ public class HikariDemoNotIndex {
             String date = new java.sql.Timestamp(System.currentTimeMillis()).toString();
             list.add(new Object[]{""+i,"1",date,null,"lixin123","lixin","123","/root","xx.com","男","123","183xxx9832",12.32D});
         }
+//        jdbcTemplate.execute("DROP INDEX user_id_index ON sys_user_info");
         long l = System.currentTimeMillis();
         jdbcTemplate.batchUpdate("insert into sys_user_info values (?,?,?,?,?,?,?,?,?,?,?,?,?)",list);
         long l1 = System.currentTimeMillis();
