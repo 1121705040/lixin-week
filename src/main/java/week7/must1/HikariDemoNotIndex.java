@@ -34,7 +34,7 @@ public class HikariDemoNotIndex {
             String date = new java.sql.Timestamp(System.currentTimeMillis()).toString();
             list.add(new Object[]{""+i,"1",date,null,"lixin123","lixin","123","/root","xx.com","男","123","183xxx9832",12.32D});
         }
-//        jdbcTemplate.execute("DROP INDEX user_id_index ON sys_user_info");
+
         long l = System.currentTimeMillis();
         jdbcTemplate.batchUpdate("insert into sys_user_info values (?,?,?,?,?,?,?,?,?,?,?,?,?)",list);
         long l1 = System.currentTimeMillis();
